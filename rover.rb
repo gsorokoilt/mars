@@ -1,19 +1,11 @@
 class Rover
 
-  def initialize (x,y,direction)
-
+  def initialize(x,y,d)
+    @x_position = x
+    @y_position = y
+    @direction = d
   end
 
-   def x_position
-      @x_position
-      end
-   def y_position
-      @y_position
-    end
-
-    def direction
-      @direction
-    end
 
   def move
     if @direction == "N"
@@ -27,8 +19,8 @@ class Rover
       elsif
         @direction == "W"
         @x_position -= 1
+      end
   end
-end
 
   def rotate_left
     if @direction == "N"
@@ -53,3 +45,9 @@ end
               @direction == "N"
       end
   end
+  j5 = Rover.new(1,2,"N")
+  j5.move
+  p j5
+
+
+end
